@@ -1,0 +1,11 @@
+.close{
+    display: none !important;
+}
+
+.open{
+    visibility: visible !important;
+}
+
+.error{
+    background: #c51244 !important;
+}
