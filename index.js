@@ -13,14 +13,14 @@ $('.submit_btn').click(function(e){
     var fio_reg = /[А-я]{1,25} [А-я]{1,25} [А-я]{1,25}/;
 	var email_reg = /[a-zA-Z._]{3,25}@[a-z]{2,20}\.[a-z]{2,3}/;
 	var phone_reg = /\+?[0-9]{11}/;
-    if($('#FIO').hasClass('open')){
-        $('#FIO').removeClass('close');
+    if($('#FIO').hasClass('error')){
+        $('#FIO').removeClass('error');
     }
-    if($('#email').hasClass('open')){
-        $('#email').removeClass('close');
+    if($('#email').hasClass('error')){
+        $('#email').removeClass('error');
     }
-    if($('#phone').hasClass('open')){
-        $('#phone').removeClass('close');
+    if($('#phone').hasClass('error')){
+        $('#phone').removeClass('error');
     }
 
     $('.error_msg').text("");
