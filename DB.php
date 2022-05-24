@@ -1,10 +1,10 @@
 <?php
 
-class DB
+class DB    //класс подключения к бд
 {
     protected $pdo;
 
-    public function __construct($dbConfigPath='config/parameters.ini')
+    public function __construct($dbConfigPath='config/parameters.ini')  //получение данных из конфига
     {
         if (!($pdoConfig = parse_ini_file($dbConfigPath))) {
             throw new Exception("Ошибка парсинга файла инициализации бд", 1);
