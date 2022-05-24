@@ -4,7 +4,7 @@ require_once "DB.php";
 
 class Mail extends DB
 {
-    public function getMailTimeByEmail($email)
+    public function getMailTimeByEmail($email)  //получение времени письма по email
     {
         $proc = $this->pdo->prepare("SELECT MAX(mail_time)
                                     FROM mails WHERE email=?;");
@@ -13,7 +13,7 @@ class Mail extends DB
         return $proc->fetch(PDO::FETCH_ASSOC);
     }
 
-    public function addMail($FIO, $email, $phone, $datetime, $comment){
+    public function addMail($FIO, $email, $phone, $datetime, $comment){     //добавить запись с письмом, аргументы(фио, email, телефон, время, содержание)
         try {
             $proc = $this->pdo->prepare("INSERT INTO mails (FIO, email, phone, mail_time, comment) 
                                             VALUES (:FIO, :email, :phone, :mail_time, :comment); ");
